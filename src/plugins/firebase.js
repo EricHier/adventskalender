@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getFirestore, collection } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyD3zkUw_LGsq6x5RvViBNAG0tacyYJSkaY",
@@ -9,4 +10,6 @@ const firebaseConfig = {
   appId: "1:1058395368676:web:e3f457873aad2c0beb50f1"
 };
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+export const daysRef = collection(db, "days");
