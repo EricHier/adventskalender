@@ -1,74 +1,97 @@
 export default [
     {
-        "description": "Heute 10% Rabatt auf das gesamte Shop Sortiment"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "Nachdem wir mit dem kleinen Boot auf der Terrasse des Wochenendhauses angekommen sind, drehen wir uns um. Hinter uns liegt unterhalb des Gartens der kleine Fluss, an dem unser Boot angelegt hat. Das Haus, der Fluss und auch der See in der sind von ausgesprochen hohen, fast urwaldartigen Bäumen umgeben. Die warme Sommer-Sonne scheint nur unregelmäßig und weich durch die Baumkronen der Bäumen. Durch den Schatten der Bäume fühlen wir uns trotz des warmen Sommerwetters nicht zu schwitzig. \n\n Hi",
     },
     {
-        "description": "Keine Versandkosten heute!"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Heute 20% Rabatt auf Mathilda Baumwollstoffe"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Erhalte 1x Prym Zubehör geschenkt ab einem MBW 9,99€"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "1 Prym \"Love\" Handmaß geschenkt in deiner Bestellung"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Heute gratis Elastic Garn bei MBW 10€ geschenkt"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Heute 10% auf einen Näh-Workshop deiner Wahl"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Heute Schnittmuster \"Debby\" ab MBW 10€ geschenkt!"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Magneteische Saumhilfe von Prym ab MBW 10€ geschenkt"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Gratis Prym Stecknadeln geschenkt ab 10€ MBW"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Heute bekommst du 10% Rabatt auf \nalle Schnittmuster"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "15% Rabatt auf alle Seidenstoffe ab MBW 25,00€"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Bei Kauf von Spitze 1m Überraschungs-Spitze geschenkt!"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Wir schenken dir heute einen Prym Trickmarker!"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Heute erhälst du 10% Rabatt auf Modalstoffe."
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Gratis 1x Prym Naht-Auftrenner bei deiner Bestellung"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Heute selbstgestickets Lavendel-Säckchen gratis!"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Gratis Prym Unversal Nähmaschinen Nadeln geschenkt!"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Bestelle heute Versandkostenfrei!"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "10€ Gutschein ab MBW 45€ geschenkt!"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Gratis \"Spli Comfort\" Schm. bei Kauf von Modal o. Lycra MBW 10€"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
+    },{
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Gratis selbsgestickets Säckchen für deine Dessous!"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     },
     {
-        "description": "Heute 15% Rabatt auf das gesamte Sortiment!"
-    },
-    {
-        "description": "45% auf einen Dessous WS 2023\n(WE ausgenommen)"
+        "description": "Heute gibt es einen weiteren Teil meiner romantischen Geschichte. Viel Spaß beim Lesen!",
+        "content": "",
     }
 ]
