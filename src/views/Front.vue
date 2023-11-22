@@ -1,16 +1,13 @@
 <template>
-  <div class="relative max-w-4xl mx-auto">
-    <h1 class="text-2xl text-center font-semibold mt-6">Paula's Adventskalender ❤️</h1>
-    <div class="p-4 md:p-6 grid grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 bg-no-repeat bg-cover bg-center" :style="{'background-image': `url('/background.jpg')}')`}" id="container">
+  <div class="relative">
+    <div class="grid grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 bg-no-repeat bg-cover bg-center" :style="{'background-image': `url('/background.jpg')}')`}">
       <tuerchen v-for="tuer in tuerchen" :tuer="tuer" :key="tuer.id"/>
     </div>
-    <Snowfall />
   </div>
 </template>
 <script>
 import tuerchen from "@/assets/data";
 import Tuerchen from "@/components/Tuerchen.vue";
-import Snowfall from "@/components/Snowfall.vue";
 
 function getPreparedTuerchen() {
   let date = new Date();
@@ -21,7 +18,7 @@ function getPreparedTuerchen() {
       ...data,
       id,
       before: date.getDate() < id,
-      today: true || date.getDate() === id && date.getMonth() === 11,
+      today: import.meta.env.DEV || date.getDate() === id && (date.getMonth() === 11 || date.getFullYear() > 2023),
       after: date.getDate() > id
     };
   }).shuffle();
@@ -36,7 +33,7 @@ function getPreparedTuerchen() {
 }
 
 export default {
-  components: { Tuerchen, Snowfall },
+  components: { Tuerchen },
   data() {
     return {
       tuerchen: getPreparedTuerchen()

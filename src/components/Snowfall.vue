@@ -1,16 +1,16 @@
 <template>
-  <canvas ref="canvas" class="absolute top-0 left-0 z-20 pointer-events-none"/>
+  <canvas ref="canvas" class="fixed top-0 left-0 z-20 pointer-events-none"/>
 </template>
 <script>
 import * as THREE from 'three/src/Three';
 
 export default {
   mounted() {
-    const element = document.getElementById("container");
+    const element = document.documentElement;
 
     let WIDTH = element.scrollWidth,
         HEIGHT = element.scrollHeight,
-        PARTICLE_COUNT = 7000;
+        PARTICLE_COUNT = 10000;
 
     let camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.5, 1000);
     let scene = new THREE.Scene();
@@ -51,8 +51,8 @@ export default {
       requestAnimationFrame(render);
 
       for (let i = 0; i < PARTICLE_COUNT; i++) {
-        if (geometry.vertices[i].y < -120)
-          geometry.vertices[i].y = 120;
+        if (geometry.vertices[i].y < -200)
+          geometry.vertices[i].y = 200;
 
         geometry.vertices[i].y -= particles[i].velocity.y;
         geometry.vertices[i].x += particles[i].velocity.x / 7;
