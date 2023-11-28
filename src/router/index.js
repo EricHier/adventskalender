@@ -1,6 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Day from "@/views/Day.vue";
-import Front from "@/views/Front.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,11 +6,11 @@ const router = createRouter({
         {
             path: '/d/:id',
             name: 'Day',
-            component: Day
+            component: () => import('@/views/Day.vue')
         }, {
             path: '/',
             name: 'Front',
-            component: Front
+            component: () => import('@/views/Front.vue')
         }, {
             path: '/encrypt-tool',
             name: 'EncryptTool',

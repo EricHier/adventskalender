@@ -6,7 +6,6 @@
   </div>
 </template>>
 <script>
-import AES from "crypto-js/aes";
 import { encrypt } from "@/utils/getTuerchen";
 
 export default {

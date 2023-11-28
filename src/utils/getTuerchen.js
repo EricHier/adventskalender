@@ -3,13 +3,7 @@ import AES from "crypto-js/aes";
 import CryptoJS from "crypto-js";
 
 function getPassword() {
-    const password = new URLSearchParams(window.location.search).get("t");
-    if (password) {
-        return password;
-    } else {
-        alert("No access without password");
-        throw new Error("No access without password");
-    }
+    return new URLSearchParams(window.location.search).get("t");
 }
 
 export function decrypt(text) {
