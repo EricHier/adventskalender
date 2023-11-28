@@ -14,7 +14,9 @@ export default {
 </script>
 <template>
   <div class="max-w-4xl mx-auto text-white">
-    <h1 class="text-2xl text-center font-semibold mt-6">Paula's Adventskalender ❤️</h1>
+    <div class="w-full z-40 bg-[#733646] shadow-2xl py-6">
+      <h1 class="text-xl text-center font-semibold">Paula's Adventskalender ❤️</h1>
+    </div>
 
     <div class="p-4 md:p-6">
       <RouterView v-if="$route.query.t"/>

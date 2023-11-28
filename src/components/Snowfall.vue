@@ -1,5 +1,5 @@
 <template>
-  <canvas ref="canvas" class="fixed top-0 left-0 z-20 pointer-events-none"/>
+  <canvas ref="canvas" class="fixed top-0 left-0 z-20 pointer-events-none opacity-50"/>
 </template>
 <script>
 import * as THREE from 'three/src/Three';
