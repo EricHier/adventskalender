@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "crypto-js": "^3.3.0",
     "firebase": "^10.6.0",
     "three": "^0.124.0",
     "vue": "^3.3.4",

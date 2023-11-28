@@ -10,8 +10,8 @@
 
     <!-- behind -->
     <div class="box text-white shadow-inner border border-white" style="background-color: #3d1c23;">
-      <h2 class="-mb-4 text-xs sm:text-base md:text-lg leading-tight select-none">{{ tuer.description }}</h2>
-      <router-link :to="`/d/${tuer.id}`"
+      <h2 class="-mb-4 text-xs sm:text-base leading-tight select-none">{{ tuer.description }}</h2>
+      <router-link :to="`/d/${tuer.id}?t=${$route.query.t}`"
                    class="monospace text-xs sm:text-sm md:text-base font-bold bg-white p-1 md:px-3 text-black rounded-md">
         Öffnen
       </router-link>

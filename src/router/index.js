@@ -13,7 +13,11 @@ const router = createRouter({
             path: '/',
             name: 'Front',
             component: Front
-        },
+        }, {
+            path: '/encrypt-tool',
+            name: 'EncryptTool',
+            component: () => import('@/views/EncryptTool.vue')
+        }
     ],
     // always scroll to top
     scrollBehavior(to, from, savedPosition) {

@@ -6,8 +6,10 @@
   </div>
 </template>
 <script>
-import tuerchen from "@/assets/data";
 import Tuerchen from "@/components/Tuerchen.vue";
+import { getTuerchen } from "@/utils/getTuerchen";
+
+const tuerchen = getTuerchen();
 
 function getPreparedTuerchen() {
   let date = new Date();
