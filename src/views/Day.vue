@@ -25,7 +25,7 @@ const priorDays = tuerchen.slice(0, id - 1).map(d => d.content);
   </div>
 
   <div class="p-4">
-    <vue-markdown class="markdown text-justify" :source="content"/>
+    <vue-markdown class="markdown text-justify" :source="content.replaceAll('\n', '\n\n')"/>
   </div>
 </template>
 <style>
