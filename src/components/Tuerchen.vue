@@ -2,15 +2,15 @@
   <div class="relative box-size mx-auto" :class="{'cursor-not-allowed' : !tuer.today }">
 
     <!-- door -->
-    <div class="box door z-20 border border-white" :style="{backgroundColor: randomBackgroundColor}"
+    <div class="box door z-20 border border-white" :style="{backgroundColor: backgroundColor}"
          :class=" {'open':opened}"
          @click="opened = tuer.today && !opened">
       <p class="text-4xl lg:text-7xl select-none font-extrabold text-white">{{ tuer.id }}</p>
     </div>
 
     <!-- behind -->
-    <div class="box text-white shadow-inner border border-white" style="background-color: #3d1c23;">
-      <h2 class="-mb-4 text-xs sm:text-base leading-tight select-none">{{ tuer.description }}</h2>
+    <div class="box text-white shadow-inner border border-white" :style="{backgroundColor: darkBackgroundColor}">
+      <h2 class="text-medium sm:text-base leading-tight select-none">{{ tuer.description }}</h2>
       <router-link :to="`/d/${tuer.id}?t=${$route.query.t}`"
                    class="monospace text-xs sm:text-sm md:text-base font-bold bg-white p-1 md:px-3 text-black rounded-md">
         Öffnen
@@ -20,37 +20,30 @@
   </div>
 </template>
 <script>
+import { shadeColor, randomBackgroundColor } from "@/utils/color";
+
+
 export default {
   props: ["tuer"],
   data() {
     return {
-      opened: false
+      opened: false,
     }
   },
-  computed: {
-    randomBackgroundColor() {
-      const random = Math.floor(Math.random() * 6);
-      switch (random) {
-        case 0:
-          return "#294F38";
-        case 1:
-          return "#c5695c";
-        case 2:
-          return "#84A07C";
-        case 3:
-          return "#733646";
-        case 4:
-          return "#974c51";
-        case 5:
-          return "#a5323f";
-      }
+  setup() {
+    const backgroundColor = randomBackgroundColor();
+    const darkBackgroundColor = shadeColor(backgroundColor, -50)
+
+    return {
+      backgroundColor,
+      darkBackgroundColor
     }
   }
 }
 </script>
 <style lang="scss" scoped>
 .box-size {
-  @apply h-32 lg:h-48 w-full p-1;
+  @apply w-full p-1 aspect-square;
 }
 
 .box {

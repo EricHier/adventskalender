@@ -14,7 +14,7 @@ export default {
 
     let camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 0.5, 1000);
     let scene = new THREE.Scene();
-    let snowflakeTexture = new THREE.TextureLoader().load('/img.png');
+    let snowflakeTexture = new THREE.TextureLoader().load('/snow-particle.png');
 
     camera.position.z = 300;
 

@@ -1,6 +1,6 @@
 <script>
 import { RouterView } from 'vue-router'
-import Snowfall from "@/components/Snowfall.vue";
+import Snowfall from "@/components/Schneefall.vue";
 
 export default {
   components: { Snowfall, RouterView },
@@ -14,9 +14,9 @@ export default {
 </script>
 <template>
   <div class="max-w-4xl mx-auto text-white">
-    <div class="w-full z-40 bg-[#733646] shadow-2xl py-6">
+    <router-link :to="`/?t=${$route.query.t}`" class="block w-full z-40 bg-[#733646] shadow-2xl py-6">
       <h1 class="text-xl text-center font-semibold">Paula's Adventskalender ❤️</h1>
-    </div>
+    </router-link>
 
     <div class="p-4 md:p-6">
       <RouterView v-if="$route.query.t"/>

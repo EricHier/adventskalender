@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <div class="grid grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4 bg-no-repeat bg-cover bg-center" :style="{'background-image': `url('/background.jpg')}')`}">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 bg-no-repeat bg-cover bg-center" :style="{'background-image': `url('/background.jpg')}')`}">
       <tuerchen v-for="tuer in tuerchen" :tuer="tuer" :key="tuer.id"/>
     </div>
   </div>
