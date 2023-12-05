@@ -4,14 +4,18 @@ import VueMarkdown from 'vue-markdown-render'
 import { getTuerchen } from "@/utils/getTuerchen";
 
 const tuerchen = getTuerchen();
-
-// get current router id
+const accurateDate = new Date((await fetch("/", { cache: "no-store" })).headers.get("Date")).getDate();
 const id = parseInt(router.currentRoute.value.params.id);
+
+if (accurateDate < id) {
+  router.push({ path: `/`, query: { t: router.currentRoute.value.query.t } });
+}
+
 const day = tuerchen[id - 1], content = day.content;
-const priorDays = tuerchen.slice(0, id - 1).map(d => d.content);
 </script>
 <template>
-  <div class="mb-4 text-center text-lg font-mono">
+  <div v-if="accurateDate >= id">
+    <div class="mb-4 text-center text-lg font-mono">
     Tag {{ id }}:
     <p class="text-base mt-2">{{ day.description }}</p>
   </div>
@@ -26,6 +30,7 @@ const priorDays = tuerchen.slice(0, id - 1).map(d => d.content);
 
   <div class="p-4">
     <vue-markdown class="markdown text-justify" :source="content.replaceAll('\n', '\n\n')"/>
+  </div>
   </div>
 </template>
 <style>

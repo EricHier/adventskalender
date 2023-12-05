@@ -19,7 +19,10 @@ export default {
     </router-link>
 
     <div class="p-4 md:p-6">
-      <RouterView v-if="$route.query.t"/>
+
+      <Suspense v-if="$route.query.t">
+        <RouterView />
+      </Suspense>
 
       <div v-else>
         Kein Passwort angegeben

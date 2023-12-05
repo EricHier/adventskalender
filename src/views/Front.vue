@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 bg-no-repeat bg-cover bg-center" :style="{'background-image': `url('/background.jpg')}')`}">
+    <div v-if="tuerchen" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 bg-no-repeat bg-cover bg-center" :style="{'background-image': `url('/background.jpg')}')`}">
       <tuerchen v-for="tuer in tuerchen" :tuer="tuer" :key="tuer.id"/>
     </div>
   </div>
@@ -11,8 +11,8 @@ import { getTuerchen } from "@/utils/getTuerchen";
 
 const tuerchen = getTuerchen();
 
-function getPreparedTuerchen() {
-  let date = new Date();
+async function getPreparedTuerchen() {
+  const date = new Date((await fetch("/", {cache: "no-store"})).headers.get("Date"));
 
   let shuffledTuerchen = tuerchen.map((data, id) => {
     id++;
@@ -38,10 +38,12 @@ export default {
   components: { Tuerchen },
   data() {
     return {
-      tuerchen: getPreparedTuerchen()
+      tuerchen: null
     }
   },
-  created() {
+  async created() {
+
+    this.tuerchen = await getPreparedTuerchen();
 
     // calculate milliseconds until midnight
     let midnight = new Date();
@@ -49,12 +51,12 @@ export default {
     let untilMidnight =  midnight.getTime() - new Date().getTime();
     const self = this;
 
-    setTimeout(() => {
-      self.tuerchen = getPreparedTuerchen();
+    setTimeout(async () => {
+      self.tuerchen = await getPreparedTuerchen();
 
       // refresh at every midnight
-      setInterval(() => {
-        self.tuerchen = getPreparedTuerchen();
+      setInterval(async () => {
+        self.tuerchen = await getPreparedTuerchen();
       }, 1000 * 60 * 60 * 24);
     }, untilMidnight)
   }
