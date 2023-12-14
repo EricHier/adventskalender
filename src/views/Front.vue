@@ -19,9 +19,9 @@ async function getPreparedTuerchen() {
     return {
       ...data,
       id,
-      before: date.getDate() < id,
-      today: import.meta.env.DEV || date.getDate() === id && (date.getMonth() === 11 || date.getFullYear() > 2023),
-      after: date.getDate() > id
+      before: date.getDate() > id,
+      today: date.getDate() === id && (date.getMonth() === 11 || date.getFullYear() > 2023),
+      after: date.getDate() < id
     };
   }).shuffle();
 

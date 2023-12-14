@@ -1,10 +1,10 @@
 <template>
-  <div class="relative box-size mx-auto" :class="{'cursor-not-allowed' : !tuer.after }">
+  <div class="relative box-size mx-auto" :class="{'cursor-not-allowed' : !(tuer.before || tuer.today) }">
 
     <!-- door -->
     <div class="box door z-20 border border-white" :style="{backgroundColor: backgroundColor}"
          :class=" {'open':opened}"
-         @click="opened = !(!tuer.after || opened)">
+         @click="opened = tuer.before || tuer.today">
       <p class="text-4xl lg:text-7xl select-none font-extrabold text-white">{{ tuer.id }}</p>
     </div>
 
